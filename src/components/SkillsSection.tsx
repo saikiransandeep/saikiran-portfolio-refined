@@ -39,12 +39,12 @@ const SkillsSection = () => {
   const ProgressBar = ({ skill }: { skill: { name: string; level: number } }) => (
     <div className="mb-4">
       <div className="flex justify-between items-center mb-2">
-        <span className="font-inter text-gray-700 font-medium">{skill.name}</span>
-        <span className="font-inter text-sm text-gray-500">{skill.level}%</span>
+        <span className="text-white font-medium">{skill.name}</span>
+        <span className="text-sm text-blue-200">{skill.level}%</span>
       </div>
-      <div className="w-full bg-gray-200 rounded-full h-2">
+      <div className="w-full bg-white/20 rounded-full h-2">
         <div 
-          className="bg-gradient-to-r from-navy to-accent h-2 rounded-full transition-all duration-1000 ease-out"
+          className="bg-gradient-to-r from-blue-400 to-blue-300 h-2 rounded-full transition-all duration-1000 ease-out"
           style={{ width: `${skill.level}%` }}
         ></div>
       </div>
@@ -52,13 +52,13 @@ const SkillsSection = () => {
   );
 
   return (
-    <section id="skills" className="py-20 bg-white">
+    <section id="skills" className="py-20 bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="font-playfair text-4xl md:text-5xl font-bold text-navy mb-6">
+        <div className="text-center mb-16 animate-fade-in">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Skills & Expertise
           </h2>
-          <p className="font-inter text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-blue-100 max-w-3xl mx-auto">
             A comprehensive toolkit for building innovative software solutions
           </p>
         </div>
@@ -67,13 +67,14 @@ const SkillsSection = () => {
           {skillCategories.map((category, index) => (
             <div 
               key={index}
-              className="bg-gradient-to-br from-ivory to-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+              className="bg-white/10 backdrop-blur-sm p-8 rounded-xl border border-white/20 hover:bg-white/15 transition-all duration-300 hover:scale-105 animate-scale-in"
+              style={{ animationDelay: `${index * 0.2}s` }}
             >
               <div className="flex items-center mb-6">
-                <div className="w-12 h-12 bg-navy/10 rounded-lg flex items-center justify-center mr-4">
-                  <category.icon className="text-navy" size={24} />
+                <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mr-4">
+                  <category.icon className="text-white" size={24} />
                 </div>
-                <h3 className="font-playfair text-xl font-bold text-navy">
+                <h3 className="text-xl font-bold text-white">
                   {category.title}
                 </h3>
               </div>
@@ -96,15 +97,16 @@ const SkillsSection = () => {
           ].map((item, index) => (
             <div 
               key={index}
-              className="text-center p-6 rounded-xl bg-gradient-to-br from-navy/5 to-accent/5 hover:from-navy/10 hover:to-accent/10 transition-all duration-300 hover:scale-105 group"
+              className="text-center p-6 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/15 transition-all duration-300 hover:scale-105 group animate-fade-in"
+              style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="w-16 h-16 bg-navy/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-accent/20 transition-colors duration-300">
-                <item.icon className="text-navy group-hover:text-navy/80" size={28} />
+              <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-white/30 transition-colors duration-300">
+                <item.icon className="text-white" size={28} />
               </div>
-              <h4 className="font-playfair text-lg font-bold text-navy mb-2">
+              <h4 className="text-lg font-bold text-white mb-2">
                 {item.title}
               </h4>
-              <p className="font-inter text-gray-600 text-sm">
+              <p className="text-blue-100 text-sm">
                 {item.desc}
               </p>
             </div>

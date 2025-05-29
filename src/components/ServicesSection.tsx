@@ -48,13 +48,13 @@ const ServicesSection = () => {
   };
 
   return (
-    <section id="services" className="py-20 bg-gradient-to-br from-ivory to-white">
+    <section id="services" className="py-20 bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="font-playfair text-4xl md:text-5xl font-bold text-navy mb-6">
+        <div className="text-center mb-16 animate-fade-in">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Services
           </h2>
-          <p className="font-inter text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-blue-100 max-w-3xl mx-auto">
             Comprehensive digital solutions tailored to bring your ideas to life
           </p>
         </div>
@@ -63,16 +63,17 @@ const ServicesSection = () => {
           {services.map((service, index) => (
             <div 
               key={index}
-              className="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 group border border-gray-100"
+              className="bg-white/10 backdrop-blur-sm p-8 rounded-xl border border-white/20 hover:bg-white/15 transition-all duration-500 hover:scale-105 group animate-scale-in"
+              style={{ animationDelay: `${index * 0.2}s` }}
             >
               <div className="text-center mb-6">
-                <div className="w-16 h-16 bg-gradient-to-br from-navy/10 to-accent/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:from-navy/20 group-hover:to-accent/20 transition-all duration-300 group-hover:scale-110">
-                  <service.icon className="text-navy group-hover:animate-pulse" size={32} />
+                <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-white/30 transition-all duration-300 group-hover:scale-110">
+                  <service.icon className="text-white group-hover:animate-pulse" size={32} />
                 </div>
-                <h3 className="font-playfair text-2xl font-bold text-navy mb-3">
+                <h3 className="text-2xl font-bold text-white mb-3">
                   {service.title}
                 </h3>
-                <p className="font-inter text-gray-600 leading-relaxed">
+                <p className="text-blue-100 leading-relaxed">
                   {service.description}
                 </p>
               </div>
@@ -80,8 +81,8 @@ const ServicesSection = () => {
               <div className="space-y-3 mb-6">
                 {service.features.map((feature, featureIndex) => (
                   <div key={featureIndex} className="flex items-center">
-                    <div className="w-2 h-2 bg-accent rounded-full mr-3"></div>
-                    <span className="font-inter text-gray-700">{feature}</span>
+                    <div className="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>
+                    <span className="text-blue-100">{feature}</span>
                   </div>
                 ))}
               </div>
@@ -89,7 +90,7 @@ const ServicesSection = () => {
               <Button 
                 onClick={scrollToContact}
                 variant="outline" 
-                className="w-full border-navy text-navy hover:bg-navy hover:text-white transition-all duration-300 group-hover:scale-105"
+                className="w-full border-white/30 text-white hover:bg-white/20 transition-all duration-300 group-hover:scale-105 backdrop-blur-sm"
               >
                 Get Started
                 <ArrowRight size={16} className="ml-2" />
@@ -98,18 +99,18 @@ const ServicesSection = () => {
           ))}
         </div>
 
-        <div className="bg-gradient-to-r from-navy to-navy/90 rounded-2xl p-8 md:p-12 text-center text-white">
-          <h3 className="font-playfair text-3xl md:text-4xl font-bold mb-4">
+        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 md:p-12 text-center text-white border border-white/20 animate-fade-in">
+          <h3 className="text-3xl md:text-4xl font-bold mb-4">
             Ready to Start Your Project?
           </h3>
-          <p className="font-inter text-lg md:text-xl mb-8 opacity-90 max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl mb-8 text-blue-100 max-w-2xl mx-auto">
             Let's collaborate to turn your ideas into reality. I'm here to help you build 
             something amazing that makes a real impact.
           </p>
           <Button 
             onClick={scrollToContact}
             size="lg"
-            className="bg-accent hover:bg-accent/90 text-navy font-inter font-semibold px-8 py-3 transition-all duration-300 hover:scale-105"
+            className="bg-white/20 hover:bg-white/30 text-white border border-white/30 font-semibold px-8 py-3 transition-all duration-300 hover:scale-105 backdrop-blur-sm"
           >
             Start a Conversation
             <ArrowRight size={18} className="ml-2" />
