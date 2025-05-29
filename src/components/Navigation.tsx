@@ -32,25 +32,30 @@ const Navigation = () => {
   };
 
   return (
-    <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-white/95 backdrop-blur-sm shadow-lg' : 'bg-transparent'
+    <nav className={`fixed top-0 w-full z-50 transition-all duration-500 ${
+      isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-200' : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
-          <div className="font-playfair text-2xl font-bold text-navy">
+          <div className={`font-bold text-2xl transition-colors duration-300 ${
+            isScrolled ? 'text-gray-800' : 'text-white'
+          }`}>
             Sai Kiran
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
-            {navItems.map((item) => (
+            {navItems.map((item, index) => (
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
-                className="text-gray-700 hover:text-navy transition-colors duration-300 relative group font-inter font-medium"
+                className={`relative font-medium transition-all duration-300 transform hover:scale-105 animate-fade-in ${
+                  isScrolled ? 'text-gray-700 hover:text-blue-600' : 'text-white hover:text-blue-300'
+                }`}
+                style={{ animationDelay: `${index * 0.1}s` }}
               >
                 {item.name}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full"></span>
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
               </button>
             ))}
           </div>
@@ -59,7 +64,9 @@ const Navigation = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="text-navy hover:text-accent transition-colors"
+              className={`transition-colors duration-300 ${
+                isScrolled ? 'text-gray-800 hover:text-blue-600' : 'text-white hover:text-blue-300'
+              }`}
             >
               {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -73,7 +80,7 @@ const Navigation = () => {
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
-                className="block w-full text-left py-2 px-4 text-gray-700 hover:text-navy hover:bg-gray-50 transition-colors duration-300 font-inter"
+                className="block w-full text-left py-3 px-4 text-gray-700 hover:text-blue-600 hover:bg-gray-50 transition-colors duration-300 font-medium"
               >
                 {item.name}
               </button>
