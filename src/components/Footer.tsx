@@ -16,9 +16,9 @@ const Footer = () => {
           
           <div className="flex items-center justify-center space-x-2 text-gray-300 font-inter">
             <span>Made with</span>
-            <Heart className="text-accent animate-pulse" size={16} />
+            <Heart className="text-orange animate-pulse" size={16} />
             <span>and</span>
-            <Code className="text-accent" size={16} />
+            <Code className="text-teal" size={16} />
             <span>by Sai Kiran</span>
           </div>
           

@@ -19,7 +19,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-ivory to-white pt-20">
+    <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-cream to-teal/10 pt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="animate-fade-in">
           {/* Profile Image Placeholder */}
@@ -31,15 +31,15 @@ const HeroSection = () => {
             Sai Kiran
           </h1>
           
-          <p className="font-inter text-xl md:text-2xl text-gray-600 mb-4 animate-slide-up" style={{ animationDelay: '0.2s' }}>
+          <p className="font-inter text-xl md:text-2xl text-charcoal mb-4 animate-slide-up" style={{ animationDelay: '0.2s' }}>
             Full Stack Developer & Software Architect
           </p>
           
-          <p className="font-inter text-lg text-gray-500 mb-8 max-w-2xl mx-auto animate-slide-up" style={{ animationDelay: '0.4s' }}>
+          <p className="font-inter text-lg text-gray-600 mb-8 max-w-2xl mx-auto animate-slide-up" style={{ animationDelay: '0.4s' }}>
             Passionate about algorithms, innovative problem-solving, and creating exceptional digital experiences
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-slide-up" style={{ animationDelay: '0.6s' }}>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-slide-up mb-16" style={{ animationDelay: '0.6s' }}>
             <Button 
               onClick={scrollToPortfolio}
               className="bg-navy hover:bg-navy/90 text-white px-8 py-3 rounded-lg font-inter font-medium flex items-center gap-2 transition-all duration-300 hover:scale-105"
@@ -51,19 +51,19 @@ const HeroSection = () => {
             <Button 
               onClick={scrollToContact}
               variant="outline"
-              className="border-navy text-navy hover:bg-navy hover:text-white px-8 py-3 rounded-lg font-inter font-medium transition-all duration-300 hover:scale-105"
+              className="border-orange text-orange hover:bg-orange hover:text-white px-8 py-3 rounded-lg font-inter font-medium transition-all duration-300 hover:scale-105"
             >
               Contact Me
             </Button>
           </div>
 
-          <div className="mt-12 animate-slide-up" style={{ animationDelay: '0.8s' }}>
-            <p className="text-sm text-gray-500 font-inter mb-4">Core Skills & Technologies</p>
+          <div className="animate-slide-up" style={{ animationDelay: '0.8s' }}>
+            <p className="text-sm text-charcoal font-inter mb-4 font-semibold">Core Skills & Technologies</p>
             <div className="flex flex-wrap justify-center gap-3">
               {['HTML', 'CSS', 'JavaScript', 'Python', 'Java', 'React', 'Full Stack'].map((skill) => (
                 <span 
                   key={skill}
-                  className="px-4 py-2 bg-white border border-gray-200 rounded-full text-sm font-inter text-gray-700 hover:border-accent hover:text-navy transition-all duration-300 hover:scale-105 cursor-default"
+                  className="px-4 py-2 bg-white border-2 border-teal rounded-full text-sm font-inter text-navy hover:bg-teal hover:text-white transition-all duration-300 hover:scale-105 cursor-default shadow-sm"
                 >
                   {skill}
                 </span>
