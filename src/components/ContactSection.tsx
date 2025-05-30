@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Mail, Phone, Linkedin, Github, Code, Trophy, ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -54,6 +55,7 @@ const ContactSection = () => {
   return (
     <section id="contact" className="py-20 bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header Section */}
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Let's Connect
@@ -64,86 +66,79 @@ const ContactSection = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="space-y-8 animate-slide-up">
-            <div>
-              <h3 className="text-2xl font-bold text-white mb-6">
-                Get In Touch
-              </h3>
-              <p className="text-blue-100 leading-relaxed mb-8">
-                Whether you have a project in mind, want to discuss opportunities, 
-                or just want to say hello, I'd love to hear from you. Let's create 
-                something amazing together!
-              </p>
-            </div>
-
-            <div className="space-y-4">
+        {/* Main Content - Reorganized */}
+        <div className="space-y-16">
+          
+          {/* Contact Information Section */}
+          <div className="animate-slide-up">
+            <h3 className="text-2xl font-bold text-white mb-8 text-center">
+              Get In Touch
+            </h3>
+            <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
               {contactMethods.map((method, index) => (
                 <a
                   key={index}
                   href={method.href}
-                  className="flex items-center p-4 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20 hover:bg-white/15 transition-all duration-300 hover:scale-105 group"
+                  className="flex items-center p-6 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20 hover:bg-white/15 transition-all duration-300 hover:scale-105 group"
                 >
                   <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mr-4 group-hover:bg-white/30 transition-colors duration-300">
                     <method.icon className="text-white" size={20} />
                   </div>
-                  <div>
+                  <div className="flex-1">
                     <p className="font-semibold text-white">{method.label}</p>
                     <p className="text-blue-100">{method.value}</p>
                   </div>
-                  <ExternalLink className="ml-auto text-blue-200 group-hover:text-white transition-colors duration-300" size={16} />
+                  <ExternalLink className="text-blue-200 group-hover:text-white transition-colors duration-300" size={16} />
                 </a>
               ))}
             </div>
           </div>
 
-          <div className="space-y-8 animate-scale-in">
-            <div>
-              <h3 className="text-2xl font-bold text-white mb-6">
-                Find Me Online
-              </h3>
-              <p className="text-blue-100 leading-relaxed mb-8">
-                Connect with me on various platforms to see my work, coding challenges, 
-                and professional journey. I'm active across multiple communities!
-              </p>
-            </div>
-
-            <div className="grid grid-cols-2 gap-4">
+          {/* Social Links Section */}
+          <div className="animate-scale-in">
+            <h3 className="text-2xl font-bold text-white mb-8 text-center">
+              Find Me Online
+            </h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 max-w-6xl mx-auto">
               {socialLinks.map((link, index) => (
                 <a
                   key={index}
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center p-4 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20 hover:bg-white/15 transition-all duration-300 hover:scale-105 group"
+                  className="flex flex-col items-center p-6 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20 hover:bg-white/15 transition-all duration-300 hover:scale-105 group"
                 >
-                  <div className="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center mr-3 group-hover:bg-white/30 transition-colors duration-300">
-                    <link.icon className={`text-white ${link.color} transition-colors duration-300`} size={18} />
+                  <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mb-3 group-hover:bg-white/30 transition-colors duration-300">
+                    <link.icon className={`text-white ${link.color} transition-colors duration-300`} size={20} />
                   </div>
-                  <div>
-                    <p className="font-medium text-white text-sm">{link.label}</p>
-                  </div>
+                  <p className="font-medium text-white text-sm text-center">{link.label}</p>
                 </a>
               ))}
             </div>
+          </div>
 
-            <div className="mt-8 p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20">
-              <h4 className="text-lg font-bold text-white mb-3">
+          {/* Call to Action Section */}
+          <div className="text-center animate-fade-in">
+            <div className="max-w-2xl mx-auto p-8 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20">
+              <h4 className="text-2xl font-bold text-white mb-4">
                 Currently Available
               </h4>
-              <p className="text-blue-100 mb-4">
+              <p className="text-blue-100 mb-6 leading-relaxed">
                 I'm actively seeking new opportunities and exciting projects. 
-                Let's discuss how we can work together!
+                Whether you have a project in mind, want to discuss opportunities, 
+                or just want to say hello, I'd love to hear from you. Let's create 
+                something amazing together!
               </p>
               <Button 
-                className="bg-white/20 hover:bg-white/30 text-white border border-white/30 font-medium transition-all duration-300 hover:scale-105 backdrop-blur-sm"
+                className="bg-white/20 hover:bg-white/30 text-white border border-white/30 font-medium transition-all duration-300 hover:scale-105 backdrop-blur-sm px-8 py-3"
                 onClick={() => window.open('mailto:saikiran@example.com')}
               >
                 Send a Message
-                <Mail size={16} className="ml-2" />
+                <Mail size={18} className="ml-2" />
               </Button>
             </div>
           </div>
+
         </div>
       </div>
     </section>
