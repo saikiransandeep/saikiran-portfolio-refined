@@ -89,7 +89,7 @@ const ServicesSection = () => {
               <Button 
                 onClick={scrollToContact}
                 variant="outline" 
-                className="w-full border-white/30 text-white hover:bg-white/20 transition-all duration-300 group-hover:scale-105 backdrop-blur-sm"
+                className="w-full bg-white/20 hover:bg-white/30 text-white border border-white/30 items-center gap-2 backdrop-blur-sm"
               >
                 Get Started
                 <ArrowRight size={16} className="ml-2" />

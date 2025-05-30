@@ -17,7 +17,7 @@ const Navigation = () => {
   const navItems = [
     { name: 'Home', href: '#home' },
     { name: 'About', href: '#about' },
-    { name: 'Portfolio', href: '#portfolio' },
+    { name: 'Projects', href: '#portfolio' },
     { name: 'Skills', href: '#skills' },
     { name: 'Services', href: '#services' },
     { name: 'Contact', href: '#contact' },
@@ -40,7 +40,7 @@ const Navigation = () => {
           <div className={`font-bold text-2xl transition-colors duration-300 ${
             isScrolled ? 'text-gray-800' : 'text-white'
           }`}>
-            Sai Kiran
+            Developer
           </div>
 
           {/* Desktop Navigation */}

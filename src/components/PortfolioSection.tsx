@@ -26,7 +26,7 @@ const PortfolioSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Portfolio
+            Projects
           </h2>
           <p className="text-xl text-blue-100 max-w-3xl mx-auto">
             Showcasing my passion for creating innovative solutions through code
@@ -83,7 +83,7 @@ const PortfolioSection = () => {
                     <ExternalLink size={16} />
                     Live Demo
                   </Button>
-                  <Button variant="outline" className="border-white/30 text-white hover:bg-white/20 flex items-center gap-2 backdrop-blur-sm">
+                  <Button variant="outline" className="bg-white/20 hover:bg-white/30 text-white border border-white/30 flex items-center gap-2 backdrop-blur-sm">
                     <Github size={16} />
                     Source Code
                   </Button>
@@ -99,7 +99,7 @@ const PortfolioSection = () => {
           </p>
           <Button 
             variant="outline" 
-            className="border-white/30 text-white hover:bg-white/20 px-8 py-3 backdrop-blur-sm"
+            className="bg-white/20 hover:bg-white/30 text-white border border-white/30 items-center gap-2 backdrop-blur-sm"
           >
             <Code size={18} className="mr-2" />
             View All Projects

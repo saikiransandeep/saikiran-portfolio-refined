@@ -39,7 +39,7 @@ const HeroSection = () => {
             
             <p className="text-lg text-blue-100 mb-8 max-w-2xl animate-slide-up leading-relaxed" style={{ animationDelay: '0.3s' }}>
               Passionate about algorithms, innovative problem-solving, and creating exceptional digital experiences. 
-              Currently pursuing B.Tech at Avanthi Institute (2022-2026) and actively seeking opportunities 
+              Currently pursuing B.Tech at Avanthi Institute and actively seeking opportunities 
               to contribute to meaningful projects.
             </p>
 
@@ -56,7 +56,7 @@ const HeroSection = () => {
               <Button 
                 onClick={() => scrollToSection('contact')}
                 variant="outline"
-                className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 shadow-lg"
+                className="border-2 border-white text-blue-600 hover:bg-white hover:text-blue-600 px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 shadow-lg"
               >
                 Get In Touch
               </Button>
@@ -66,7 +66,7 @@ const HeroSection = () => {
             <div className="mt-10 animate-slide-up" style={{ animationDelay: '0.5s' }}>
               <p className="text-blue-200 font-semibold mb-4">Core Technologies</p>
               <div className="flex flex-wrap justify-center lg:justify-start gap-3">
-                {['HTML', 'CSS', 'JavaScript', 'Python', 'Java', 'React', 'Full Stack'].map((skill, index) => (
+                {['HTML', 'CSS', 'JavaScript', 'Python', 'Java', 'React'].map((skill, index) => (
                   <span 
                     key={skill}
                     className="px-4 py-2 bg-white/20 backdrop-blur-sm border border-white/30 rounded-full text-sm text-white hover:bg-white/30 transition-all duration-300 hover:scale-110 cursor-default"
@@ -80,16 +80,19 @@ const HeroSection = () => {
           </div>
 
           {/* Right Side - Photo */}
-          <div className="flex justify-center lg:justify-end animate-fade-in" style={{ animationDelay: '0.3s' }}>
+          <div
+            className="flex justify-center lg:justify-end animate-fade-in"
+            style={{ animationDelay: '0.3s', position: 'relative', left: '-20%' }}
+          >
             <div className="relative">
-              <div className="w-80 h-60 bg-gradient-to-br from-white/20 to-white/10 backdrop-blur-sm rounded-2xl border border-white/30 flex items-center justify-center shadow-2xl transform hover:scale-105 transition-all duration-300">
-                <div className="w-72 h-52 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-xl flex items-center justify-center border border-white/20">
+              <div className="w-80 h-[23.4rem] bg-gradient-to-br from-white/20 to-white/10 backdrop-blur-sm rounded-2xl border border-white/30 flex items-center justify-center shadow-2xl hover:scale-105 transition-all duration-300">
+                {/* <div className="w-92 h-71 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-xl flex items-center justify-center border border-white/20">
                   <span className="text-6xl font-bold text-white/80">SK</span>
-                </div>
+                </div> */}
               </div>
               {/* Floating Elements */}
-              <div className="absolute -top-4 -right-4 w-8 h-8 bg-yellow-400 rounded-full animate-bounce"></div>
-              <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-pink-400 rounded-full animate-bounce" style={{ animationDelay: '0.5s' }}></div>
+              {/* <div className="absolute -top-4 -right-4 w-8 h-8 bg-yellow-400 rounded-full animate-bounce"></div> */}
+              {/* <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-pink-400 rounded-full animate-bounce" style={{ animationDelay: '0.5s' }}></div> */}
             </div>
           </div>
         </div>
