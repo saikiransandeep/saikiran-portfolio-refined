@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Code, Database, Globe, Smartphone, Server, Brain } from 'lucide-react';
 
@@ -52,7 +51,7 @@ const SkillsSection = () => {
   );
 
   return (
-    <section id="skills" className="py-20 bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900">
+    <section id="skills" className="py-20 bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
