@@ -48,13 +48,13 @@ const ServicesSection = () => {
   };
 
   return (
-    <section id="services" className="py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
+    <section id="services" className="py-20 bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Services
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-blue-100 max-w-3xl mx-auto">
             Comprehensive digital solutions tailored to bring your ideas to life
           </p>
         </div>
@@ -63,17 +63,17 @@ const ServicesSection = () => {
           {services.map((service, index) => (
             <div 
               key={index}
-              className="bg-white p-8 rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all duration-500 hover:scale-105 group animate-scale-in"
+              className="bg-white/10 backdrop-blur-sm p-8 rounded-xl border border-white/20 hover:bg-white/15 transition-all duration-500 hover:scale-105 group animate-scale-in"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
               <div className="text-center mb-6">
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-200 transition-all duration-300 group-hover:scale-110">
-                  <service.icon className="text-blue-600 group-hover:animate-pulse" size={32} />
+                <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-white/30 transition-all duration-300 group-hover:scale-110">
+                  <service.icon className="text-white group-hover:animate-pulse" size={32} />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                <h3 className="text-2xl font-bold text-white mb-3">
                   {service.title}
                 </h3>
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-blue-100 leading-relaxed">
                   {service.description}
                 </p>
               </div>
@@ -81,38 +81,39 @@ const ServicesSection = () => {
               <div className="space-y-3 mb-6">
                 {service.features.map((feature, featureIndex) => (
                   <div key={featureIndex} className="flex items-center">
-                    <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
-                    <span className="text-gray-600">{feature}</span>
+                    <div className="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>
+                    <span className="text-blue-100">{feature}</span>
                   </div>
                 ))}
               </div>
 
               <Button 
                 onClick={scrollToContact}
-                className="w-full bg-blue-600 text-white hover:bg-blue-700 px-8 py-3 rounded-lg font-semibold flex items-center gap-3 transition-all duration-300 hover:scale-105 shadow-lg"
+                variant="outline" 
+                className="w-full border-white/30 text-white hover:bg-white/20 transition-all duration-300 group-hover:scale-105 backdrop-blur-sm"
               >
                 Get Started
-                <ArrowRight size={16} />
+                <ArrowRight size={16} className="ml-2" />
               </Button>
             </div>
           ))}
         </div>
 
-        <div className="bg-white rounded-2xl p-8 md:p-12 text-center border border-gray-200 animate-fade-in">
-          <h3 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
+        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 md:p-12 text-center text-white border border-white/20 animate-fade-in">
+          <h3 className="text-3xl md:text-4xl font-bold mb-4">
             Ready to Start Your Project?
           </h3>
-          <p className="text-lg md:text-xl mb-8 text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl mb-8 text-blue-100 max-w-2xl mx-auto">
             Let's collaborate to turn your ideas into reality. I'm here to help you build 
             something amazing that makes a real impact.
           </p>
           <Button 
             onClick={scrollToContact}
             size="lg"
-            className="bg-blue-600 text-white hover:bg-blue-700 px-8 py-3 rounded-lg font-semibold flex items-center gap-3 transition-all duration-300 hover:scale-105 shadow-lg mx-auto"
+            className="bg-white/20 hover:bg-white/30 text-white border border-white/30 font-semibold px-8 py-3 transition-all duration-300 hover:scale-105 backdrop-blur-sm"
           >
             Start a Conversation
-            <ArrowRight size={18} />
+            <ArrowRight size={18} className="ml-2" />
           </Button>
         </div>
       </div>

@@ -8,11 +8,10 @@ import SkillsSection from '@/components/SkillsSection';
 import ServicesSection from '@/components/ServicesSection';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
-import BackToTop from '@/components/BackToTop';
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900">
       <Navigation />
       <HeroSection />
       <AboutSection />
@@ -21,7 +20,6 @@ const Index = () => {
       <ServicesSection />
       <ContactSection />
       <Footer />
-      <BackToTop />
     </div>
   );
 };
