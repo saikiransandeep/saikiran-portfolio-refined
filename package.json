@@ -8,7 +8,7 @@
     "dev": "vite",
     "build": "react-scripts build",
     "build:dev": "vite build --mode development",
-    "deploy": "npm run build && gh-pages -d build -b gh-pages",
+    "deploy": "npm run build:dev && gh-pages -d dist -b gh-pages",
     "lint": "eslint .",
     "preview": "vite preview"
   },
