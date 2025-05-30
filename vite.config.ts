@@ -1,22 +1,19 @@
 import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react-swc";
-import path from "path";
-import { componentTagger } from "lovable-tagger";
+import react from '@vitejs/plugin-react-swc'; // Use SWC plugin as it's in devDependencies
+import path from "path"; // Import path module for resolving aliases
 
 // https://vitejs.dev/config/
-export default defineConfig(({ mode }) => ({
-  server: {
-    host: "::",
-    port: 8080,
-  },
+// Replace your-username and repo-name below!
+export default defineConfig({
+  base: '/saikiran-portfolio-refined/', // ✅ your repo name, with slashes!
   plugins: [
     react(),
-    mode === 'development' &&
-    componentTagger(),
-  ].filter(Boolean),
+  ],
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "./src"),
+      "@": path.resolve(__dirname, "./src"), // Restore common path alias
     },
   },
-}));
+});
+
+
