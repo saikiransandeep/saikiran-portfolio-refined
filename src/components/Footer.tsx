@@ -4,26 +4,26 @@ import { Heart, Code } from 'lucide-react';
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-800 text-white py-8">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <footer className="bg-gray-800 text-white py-4">
+      <div className="max-w-4xl mx-auto px-2 sm:px-4 lg:px-6">
         <div className="text-center">
-          <div className="mb-4">
-            <h3 className="text-2xl font-bold mb-2">Sai Kiran</h3>
-            <p className="text-gray-300">
+          <div className="mb-2">
+            <h3 className="text-lg font-semibold mb-1">Sai Kiran</h3>
+            <p className="text-gray-300 text-xs">
               Full Stack Developer & Software Architect
             </p>
           </div>
           
-          <div className="flex items-center justify-center space-x-2 text-gray-300">
+          <div className="flex items-center justify-center space-x-1 text-gray-300 text-xs">
             <span>Made with</span>
-            <Heart className="text-red-500 animate-pulse" size={16} />
+            <Heart className="text-red-500 animate-pulse" size={12} />
             <span>and</span>
-            <Code className="text-blue-400" size={16} />
+            <Code className="text-blue-400" size={12} />
             <span>by Sai Kiran</span>
           </div>
           
-          <div className="mt-4 pt-4 border-t border-gray-700">
-            <p className="text-gray-400 text-sm">
+          <div className="mt-2 pt-2 border-t border-gray-700">
+            <p className="text-gray-400 text-xs">
               © {new Date().getFullYear()} Sai Kiran. All rights reserved.
             </p>
           </div>
