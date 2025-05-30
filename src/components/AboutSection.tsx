@@ -1,10 +1,9 @@
-
 import React from 'react';
 import { GraduationCap, Target, Code } from 'lucide-react';
 
 const AboutSection = () => {
   return (
-    <section id="about" className="py-20 bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900">
+    <section id="about" className="py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 animate-fade-in">
