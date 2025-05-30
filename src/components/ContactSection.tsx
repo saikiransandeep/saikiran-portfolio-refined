@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Mail, Phone, Linkedin, Github, Code, Trophy, ExternalLink } from 'lucide-react';
+import { Mail, Phone, ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const ContactSection = () => {
@@ -19,39 +19,6 @@ const ContactSection = () => {
     }
   ];
 
-  const socialLinks = [
-    {
-      icon: Linkedin,
-      label: "LinkedIn",
-      href: "https://linkedin.com/in/saikiran",
-      color: "hover:text-blue-300"
-    },
-    {
-      icon: Github,
-      label: "GitHub",
-      href: "https://github.com/saikiran",
-      color: "hover:text-blue-300"
-    },
-    {
-      icon: Code,
-      label: "LeetCode",
-      href: "https://leetcode.com/saikiran",
-      color: "hover:text-blue-300"
-    },
-    {
-      icon: Trophy,
-      label: "GeeksforGeeks",
-      href: "https://geeksforgeeks.org/user/saikiran",
-      color: "hover:text-blue-300"
-    },
-    {
-      icon: Code,
-      label: "HackerRank",
-      href: "https://hackerrank.com/saikiran",
-      color: "hover:text-blue-300"
-    }
-  ];
-
   return (
     <section id="contact" className="py-20 bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -66,7 +33,7 @@ const ContactSection = () => {
           </p>
         </div>
 
-        {/* Main Content - Reorganized */}
+        {/* Main Content */}
         <div className="space-y-16">
           
           {/* Contact Information Section */}
@@ -89,29 +56,6 @@ const ContactSection = () => {
                     <p className="text-blue-100">{method.value}</p>
                   </div>
                   <ExternalLink className="text-blue-200 group-hover:text-white transition-colors duration-300" size={16} />
-                </a>
-              ))}
-            </div>
-          </div>
-
-          {/* Social Links Section */}
-          <div className="animate-scale-in">
-            <h3 className="text-2xl font-bold text-white mb-8 text-center">
-              Find Me Online
-            </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 max-w-6xl mx-auto">
-              {socialLinks.map((link, index) => (
-                <a
-                  key={index}
-                  href={link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex flex-col items-center p-6 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20 hover:bg-white/15 transition-all duration-300 hover:scale-105 group"
-                >
-                  <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mb-3 group-hover:bg-white/30 transition-colors duration-300">
-                    <link.icon className={`text-white ${link.color} transition-colors duration-300`} size={20} />
-                  </div>
-                  <p className="font-medium text-white text-sm text-center">{link.label}</p>
                 </a>
               ))}
             </div>
