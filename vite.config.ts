@@ -5,13 +5,13 @@ import path from "path"; // Import path module for resolving aliases
 // https://vitejs.dev/config/
 // Replace your-username and repo-name below!
 export default defineConfig({
-  base: '/saikiran-portfolio-refined/', // ✅ your repo name, with slashes!
+  base: '/saikiran-portfolio-refined/', // use lowercase to match your URL
   plugins: [
     react(),
   ],
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "./src"), // Restore common path alias
+      "@": path.resolve(__dirname, "./src"),
     },
   },
 });
