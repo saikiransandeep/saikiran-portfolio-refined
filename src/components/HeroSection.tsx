@@ -87,7 +87,7 @@ const HeroSection = () => {
             <div className="relative">
               {/* Replace with your actual image */}
               <img
-                src="./sandeep.jpg" // <-- REPLACE THIS WITH YOUR PHOTO URL
+                src="/sandeep.jpg" // <-- Path relative to the public folder
                 alt="Sai Kiran - Full Stack Developer"
                 className="w-80 h-[23.4rem] object-cover rounded-2xl border border-white/30 shadow-2xl hover:scale-105 transition-all duration-300"
               />
