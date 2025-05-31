@@ -6,11 +6,11 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "react-scripts build",
-    "build:dev": "vite build --mode development",
-    "deploy": "npm run build:dev && gh-pages -d dist -b gh-pages",
+    "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist -b gh-pages -m \"Deploy to GitHub Pages\" -s"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",
