@@ -85,14 +85,14 @@ const HeroSection = () => {
             style={{ animationDelay: '0.3s', position: 'relative', left: '-20%' }}
           >
             <div className="relative">
-              <div className="w-80 h-[23.4rem] bg-gradient-to-br from-white/20 to-white/10 backdrop-blur-sm rounded-2xl border border-white/30 flex items-center justify-center shadow-2xl hover:scale-105 transition-all duration-300">
-                {/* <div className="w-92 h-71 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-xl flex items-center justify-center border border-white/20">
-                  <span className="text-6xl font-bold text-white/80">SK</span>
-                </div> */}
-              </div>
+              {/* Replace with your actual image */}
+              <img
+                src="./sandeep.jpg" // <-- REPLACE THIS WITH YOUR PHOTO URL
+                alt="Sai Kiran - Full Stack Developer"
+                className="w-80 h-[23.4rem] object-cover rounded-2xl border border-white/30 shadow-2xl hover:scale-105 transition-all duration-300"
+              />
               {/* Floating Elements */}
               {/* <div className="absolute -top-4 -right-4 w-8 h-8 bg-yellow-400 rounded-full animate-bounce"></div> */}
-              {/* <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-pink-400 rounded-full animate-bounce" style={{ animationDelay: '0.5s' }}></div> */}
             </div>
           </div>
         </div>
